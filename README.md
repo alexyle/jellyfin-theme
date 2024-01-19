@@ -2,6 +2,8 @@
 
 just theme for jellyfin
 
+fork of this css : https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_css_for_moviestv_show_sections/
+
 ## glassmorphism
 
 ![gif 1 (1)](https://github.com/alexyle/jellyfin-theme/assets/53535044/b46cfbe5-8f02-4a7e-bedd-0e00aa8d474c)
