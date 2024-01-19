@@ -1,0 +1,523 @@
+:root {
+  --blur: 10px;
+}
+
+
+/* LOGIN Section */
+/* Narrow the login form */
+#loginPage .readOnlyContent,
+#loginPage form {
+  max-width: 22em;
+}
+
+/* Hide "please login" text, margin is to prevent login form moving too far up */
+#loginPage h1 {
+  display: none;
+}
+
+
+#loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 50px;
+}
+
+/* Hide "manual" and "forgot" buttons */
+#loginPage .raised.cancel.block.btnManual.emby-button {
+  display: none;
+}
+
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none;
+}
+
+.backgroundContainer,
+html {
+  background-color: #181818;
+}
+
+/*#####################################################################################################################
+            LAYOUT DESKTOP
+
+######################################################################################################################*/
+
+.layout-desktop .detailLogo {
+  left: 5%;
+  background-position: top left;
+}
+
+.layout-desktop .itemBackdrop {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 80vw;
+  position: relative;
+  right: -20%;
+}
+
+.layout-desktop .itemBackdrop:after {
+  background: url("../../themes/test/mask.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+  margin-top: -65vh;
+  /* inicial: 73 */
+}
+
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .itemTags,
+.layout-desktop .itemExternalLinks {
+  display: none;
+}
+
+.layout-desktop .detailPagePrimaryContainer,
+.layout-desktop .detailPageContent {
+  padding-left: 5%;
+}
+
+.layout-desktop .detailPagePrimaryContent {
+  width: 45%;
+}
+
+.layout-desktop .detailPagePrimaryContainer {
+  display: inline-table;
+  z-index: 2;
+  left: 5%;
+}
+
+.layout-desktop .detailPageSecondaryContainer {
+  margin: 0 0 1.25em 0;
+}
+
+.layout-desktop .itemDetailsGroup {
+  margin-top: 0;
+}
+
+.layout-desktop a.overview-expand.emby-button {
+  margin: none;
+  padding: none;
+}
+
+.layout-desktop form.trackSelections,
+.layout-desktop .itemName.originalTitle {
+  display: none;
+}
+
+.layout-desktop .itemName,
+.layout-mobile .itemName {
+  font-weight: normal;
+}
+
+/* buttons section styles */
+
+.layout-desktop .mainDetailButtons {
+  margin-top: 1.5em;
+}
+
+.layout-desktop .btnPlay {
+  /*border: 2px solid #cecece;*/
+  border-radius: 2em;
+  /*width: 7vw;*/
+  background-color: #0000003d;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /*padding: 0.4em!important;*/
+  /*margin-right: 30%!important;*/
+}
+
+.layout-desktop .btnPlay:hover {
+  background-color: #00a5dc28;
+  transform: scale(1.05) translateX(5px);
+}
+
+.layout-desktop .btnPlay::after {
+  content: attr(title);
+  margin: 0 10px 0 2px;
+  color: white;
+}
+
+.layout-desktop .material-icons.detailButton-icon.play_arrow {
+  color: white;
+
+}
+
+.layout-desktop .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+.layout-desktop .listViewUserDataButtons {
+  display: none;
+}
+
+/*  season section  */
+.layout-desktop .vertical-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.layout-desktop .listItem-withContentWrapper {
+  align-items: flex-start;
+  flex-direction: column;
+  width: 32%;
+}
+
+.layout-desktop .listItem-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.layout-desktop .listItemImage-large {
+  height: 16vw;
+  width: 100%;
+}
+
+
+
+/*#####################################################################################################################
+            LAYOUT MOBILE
+
+######################################################################################################################*/
+
+.layout-mobile .headerHomeButton,
+.layout-mobile .headerCastButton,
+.layout-mobile .headerSyncButton {
+  display: none;
+}
+
+.layout-mobile .mainDrawerButton {
+  display: block !important;
+}
+
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.headerTabs.sectionTabs {
+  text-size-adjust: 110%;
+  font-size: 110%;
+}
+
+.pageTitle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.emby-tab-button {
+  padding: 1.75em 1.7em;
+}
+
+/* Seccion Peliculas/Series */
+
+.layout-mobile .itemTags,
+.layout-mobile .itemExternalLinks,
+.layout-mobile .trackSelections,
+.layout-mobile .itemName.originalTitle,
+.layout-mobile .directorsGroup,
+.layout-mobile .writersGroup,
+#seriesAirTime {
+  display: none;
+}
+
+/* Quitamos imagen de poster */
+.layout-mobile .detailImageContainer .card,
+.layout-mobile .detailImageContainer .card.backdropCard,
+.layout-mobile .detailImageContainer .card.squareCard {
+  top: auto;
+  display: none;
+}
+
+/* Mostrando Logo y posicionandolo */
+.layout-mobile .detailLogo {
+  display: block;
+  width: 15em;
+  left: 5%;
+  top: 17vh;
+}
+
+/* Mismo color de fondo a franja gris */
+.detailRibbon {
+  background: rgba(32, 32, 32, 0);
+}
+
+/* Sipnosis tamano de 5 lineas */
+.detail-clamp-text {
+  -webkit-line-clamp: 4;
+}
+
+
+.layout-mobile .infoWrapper {
+  padding-left: 0;
+  margin-top: 6em;
+}
+
+.layout-mobile .itemMiscInfo,
+.layout-mobile .itemName,
+.layout-mobile .mainDetailButtons,
+.layout-mobile .parentName {
+  text-align: left;
+}
+
+.layout-mobile .itemMiscInfo,
+.layout-mobile .itemName,
+.layout-mobile .mainDetailButtons,
+.layout-mobile .parentName {
+  justify-content: left;
+  text-align: left;
+}
+
+/* Titulo Original y removiendo el titulo actual */
+.layout-mobile .itemName.parentNameLast.withOriginalTitle {
+  margin: 0.6em 0;
+}
+
+/* moviendo a la Izq Contenedor de botones de pelicula*/
+.layout-mobile .mainDetailButtons {
+  padding-left: 0;
+}
+
+/* arregalndo padding y margin y aumentando tamano de fanart y agregando degradado */
+.layout-mobile .itemBackdrop {
+  height: 40vh;
+  /*30*/
+  margin-top: 0;
+}
+
+.layout-mobile .itemBackdrop::before {
+  content: '';
+  right: 0;
+  left: 0;
+  /*top: 0;*/
+  bottom: 0;
+  height: 25vh;
+  position: absolute;
+  z-index: -1;
+  /*background: linear-gradient(0deg, #181818 15%, #18181800 65%);*/
+  background: linear-gradient(0deg, #181818 10%, #18181800 65%);
+}
+
+.layout-mobile .detailPageWrapperContainer {
+  top: -5em;
+}
+
+.layout-mobile .infoWrapper {
+  margin-top: 0;
+}
+
+.layout-mobile .itemName.parentNameLast.withOriginalTitle {
+  margin: 0 0 0.6em 0;
+}
+
+.layout-mobile .detailPageSecondaryContainer {
+  margin: 0 0 1em 0;
+}
+
+.layout-mobile .overview-expand {
+  padding: 0 1em 0.3em 1em;
+}
+
+/* play boton */
+.layout-mobile .mainDetailButtons {
+  margin-top: 1.5em;
+}
+
+.layout-mobile .btnPlay {
+  border-radius: 2em;
+  /*width: 7vw;*/
+  background-color: #0000003d;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /*padding: 0.4em!important;*/
+  /*margin-right: 30%!important;*/
+}
+
+
+.layout-mobile .btnPlay::after {
+  content: attr(title);
+  margin: 0 10px 0 2px;
+  color: black;
+}
+
+.layout-mobile .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+.layout-mobile .btnShuffle,
+.layout-desktop .btnShuffle {
+  display: none;
+}
+
+.layout-mobile .material-icons.detailButton-icon.play_arrow {
+  color: white;
+}
+
+.layout-mobile .listViewUserDataButtons {
+  display: none;
+}
+
+.layout-mobile .listItem-content {
+  display: block;
+}
+
+.layout-mobile .listItem-content .listItemBody {
+  padding: 0.85em 0;
+}
+
+.layout-mobile .listItem-content .listItemImage-large {
+  height: 30vw;
+  width: 86vw;
+}
+
+.layout-mobile .listItem-content .listItemImage-large .listItemImageButton,
+.listItemIndicators {
+  font-size: 1em !important;
+}
+
+.layout-mobile .listItem-bottomoverview {
+  font-size: 100%;
+}
+
+.layout-mobile .detailPagePrimaryContent {
+  position: relative;
+  margin-top: 1em;
+}
+
+
+
+/********************************************************************************************************
+      general layout
+********************************************************************************************/
+/* cast & crew circular */
+
+
+#castContent .cardPadder.cardPadder-overflowPortrait.lazy-hidden-children,
+#castContent .cardPadder-mixedPortrait,
+#castContent .cardPadder-overflowPortrait,
+#castContent .cardPadder-portrait,
+#castContent .overflowPortraitCard-textCardPadder {
+  padding-bottom: 100%;
+}
+
+#castContent .cardOverlayButton-br {
+  bottom: 0;
+  position: absolute;
+  left: 38%;
+}
+
+
+.dialog {
+  background-color: #0000003d;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+}
+
+.actionSheetContent {
+  padding: 0px 0px;
+  border: none;
+}
+
+.actionsheetDivider {
+  margin: 0;
+  border: none;
+}
+
+.listItem:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.listItem:hover {
+  background: #2424245e;
+}
+
+.skinHeader-withBackground {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cardOverlayContainer {
+  background: #0000003d;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card-hoverable:hover .cardOverlayButton-hover {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dialogBackdropOpened {
+  opacity: 0.3;
+}
+
+.cardBox {
+  box-shadow: 4px 4px 10px 0px #000000a8;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cardBox:hover {
+  box-shadow: 5px 5px 12px 0px #000000a8;
+}
+
+.itemsContainer>.card>.cardBox {
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.itemsContainer>.card>.cardBox:hover {
+  transform: scale(1.015) translateX(5px);
+}
+
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.visualCardBox {
+  background-color: #202020a8;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.cardTextCentered,
+.cardTextCentered>.textActionButton {
+  padding-bottom: 5%;
+}
+
+.cardText-first {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.indicator {
+  background: linear-gradient(135deg, rgba(170, 92, 195, 0.5) 0%, rgba(3, 163, 220, 0.5) 100%);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.semiTransparent,
+.osdHeader {
+  box-shadow: none;
+  border: none;
+}
