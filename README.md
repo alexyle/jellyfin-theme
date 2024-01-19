@@ -14,6 +14,10 @@ fork of this css : https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_
 
 ![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/024a3f5f-f19d-4ad2-825c-23353e630223)
 
+
+![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/a7b851a6-303f-4489-a7bc-6362a92e0d0a)
+
+
 ### instalation
 
 
