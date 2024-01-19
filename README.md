@@ -11,3 +11,10 @@ just theme for jellyfin
 
 
 ![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/024a3f5f-f19d-4ad2-825c-23353e630223)
+
+### instalation
+
+
+```
+https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/theme.css
+```
