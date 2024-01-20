@@ -22,5 +22,5 @@ fork of this css : https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_
 
 
 ```
-https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/theme.css
+https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css
 ```
