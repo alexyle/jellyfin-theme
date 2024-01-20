@@ -20,7 +20,7 @@ I have made a fork of this theme: https://www.reddit.com/r/jellyfin/comments/12w
 
 ### Installation
 
-
+add on custom css
 ```
-https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css
+@import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
 ```
