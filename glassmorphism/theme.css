@@ -56,7 +56,7 @@ html {
 }
 
 .layout-desktop .itemBackdrop:after {
-  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/mask.png");
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
   background-size: cover;
   width: 100%;
   height: 100%;

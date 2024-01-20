@@ -2,7 +2,7 @@
 
 just theme for jellyfin
 
-fork of this css : https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_css_for_moviestv_show_sections/
+I have made a fork of this theme: https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_css_for_moviestv_show_sections/
 
 ## glassmorphism
 
@@ -18,9 +18,9 @@ fork of this css : https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_
 ![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/a7b851a6-303f-4489-a7bc-6362a92e0d0a)
 
 
-### instalation
+### Installation
 
 
 ```
-https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/theme.css
+https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css
 ```
