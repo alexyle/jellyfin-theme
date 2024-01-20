@@ -6,7 +6,7 @@ I have made a fork of this theme: https://www.reddit.com/r/jellyfin/comments/12w
 
 ## glassmorphism
 
-![gif 1 (1)](https://github.com/alexyle/jellyfin-theme/assets/53535044/b46cfbe5-8f02-4a7e-bedd-0e00aa8d474c)
+![gif 1 (1)](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.gif?raw=true)
 
 
 ![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/fdf4ad37-5cd5-4f94-985f-196143d8daf8)
