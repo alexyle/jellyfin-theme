@@ -68,8 +68,7 @@ html {
 }
 
 .layout-desktop .detailImageContainer .card,
-.layout-desktop .itemTags,
-.layout-desktop .itemExternalLinks {
+.layout-desktop .itemTags{
   display: none;
 }
 
@@ -221,7 +220,6 @@ html {
 /* Seccion Peliculas/Series */
 
 .layout-mobile .itemTags,
-.layout-mobile .itemExternalLinks,
 .layout-mobile .trackSelections,
 .layout-mobile .itemName.originalTitle,
 .layout-mobile .directorsGroup,
@@ -466,7 +464,6 @@ html {
 .dialogBackdropOpened {
   opacity: 0.3;
 }
-
 .cardBox {
   box-shadow: 4px 4px 10px 0px #000000a8;
   background: rgba(0, 0, 0, 0.3);
@@ -521,3 +518,4 @@ html {
   box-shadow: none;
   border: none;
 }
+
