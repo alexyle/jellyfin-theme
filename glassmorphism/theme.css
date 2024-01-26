@@ -100,7 +100,7 @@ html {
   padding: none;
 }
 
-.layout-desktop form.trackSelections,
+
 .layout-desktop .itemName.originalTitle {
   display: none;
 }
@@ -220,7 +220,6 @@ html {
 /* Seccion Peliculas/Series */
 
 .layout-mobile .itemTags,
-.layout-mobile .trackSelections,
 .layout-mobile .itemName.originalTitle,
 .layout-mobile .directorsGroup,
 .layout-mobile .writersGroup,
