@@ -463,10 +463,11 @@ html {
 .dialogBackdropOpened {
   opacity: 0.3;
 }
+
 .cardBox {
   box-shadow: 4px 4px 10px 0px #000000a8;
   background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(var(--blur));
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 3px;
@@ -518,3 +519,50 @@ html {
   border: none;
 }
 
+.cardOverlayButton:hover {
+  background-color: rgba(0, 164, 220, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.cardOverlayFab-primary{
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+
+}
+
+
+.emby-select-withcolor{
+  background-color: #202020a8;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.emby-select{
+  width: 20%;
+  transition: all 0.5s ease-in-out;
+}
+
+.emby-select:hover{
+  width: 100%;
+}
+
+.emby-select:focus{
+  width: 100%;
+}
+
+
+.selectArrowContainer{
+  margin-top: 1px;
+  height: 18px;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  background-color: #202020a8;
+  position: relative;
+  top: 0;
+  right: 1.5em;
+}
