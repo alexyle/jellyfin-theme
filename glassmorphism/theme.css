@@ -542,16 +542,16 @@ html {
   -webkit-backdrop-filter: blur(var(--blur));
 }
 
-.emby-select{
+.detailTrackSelect{
   width: 20%;
   transition: all 0.5s ease-in-out;
 }
 
-.emby-select:hover{
+.detailTrackSelect:hover{
   width: 100%;
 }
 
-.emby-select:focus{
+.detailTrackSelect:focus{
   width: 100%;
 }
 
