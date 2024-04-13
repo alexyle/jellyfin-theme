@@ -148,9 +148,7 @@ html {
   flex-direction: row;
 }
 
-.layout-desktop .listViewUserDataButtons {
-  display: none;
-}
+
 
 /*  season section  */
 .layout-desktop .vertical-list {
@@ -489,7 +487,6 @@ html {
 }
 
 .collapseContent,
-.formDialogFooter:not(.formDialogFooter-clear),
 .formDialogHeader:not(.formDialogHeader-clear),
 .paperList,
 .visualCardBox {
@@ -565,4 +562,14 @@ html {
   position: relative;
   top: 0;
   right: 1.5em;
+}
+
+
+.formDialogFooter{
+  background-color: #202020;
+  box-shadow: #00000047 0 -20px 20px;
+}
+
+.vertical-list{
+  display: block;
 }
