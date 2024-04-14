@@ -434,9 +434,15 @@ html {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.listItem{
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 .listItem:hover {
   background: #2424245e;
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .skinHeader-withBackground {
