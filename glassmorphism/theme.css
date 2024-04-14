@@ -573,3 +573,17 @@ html {
 .vertical-list{
   display: block;
 }
+
+@media (min-width: 768px){
+  .headerTabs.sectionTabs{
+    margin-top: -4.3em;
+  }
+  
+}
+
+@media (max-width: 767px){
+  .libraryPage:not(.noSecondaryNavPage){
+    padding-top: 9em !important;
+  }
+
+}
