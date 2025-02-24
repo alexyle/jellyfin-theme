@@ -18,13 +18,13 @@ This theme is a fork of the original design shared on Reddit: [My custom CSS for
 
 ### Elegant Glassmorphism in Action:
 
-![Glassmorphism Screenshot 1](https://github.com/alexyle/jellyfin-theme/assets/53535044/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a)
+![Glassmorphism Screenshot 1](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
 
-![Glassmorphism Screenshot 2](https://github.com/alexyle/jellyfin-theme/assets/53535044/fdf4ad37-5cd5-4f94-985f-196143d8daf8)
+![Glassmorphism Screenshot 2](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298104937-fdf4ad37-5cd5-4f94-985f-196143d8daf8.png?raw=true)
 
-![Glassmorphism Screenshot 3](https://github.com/alexyle/jellyfin-theme/assets/53535044/024a3f5f-f19d-4ad2-825c-23353e630223)
+![Glassmorphism Screenshot 3](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298105470-024a3f5f-f19d-4ad2-825c-23353e630223.png?raw=true)
 
-![Glassmorphism Screenshot 4](https://github.com/alexyle/jellyfin-theme/assets/53535044/a7b851a6-303f-4489-a7bc-6362a92e0d0a)
+![Glassmorphism Screenshot 4](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-4489-a7bc-6362a92e0d0a.png?raw=true)
 
 ---
 
