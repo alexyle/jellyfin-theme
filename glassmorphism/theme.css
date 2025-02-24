@@ -1,98 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Global Variables */
 :root {
-  --blur: 10px;
+  --bg-color: #18181849;
+  --blur: blur(16px) saturate(180%);
+  --border-color: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%);
+  --card-bg: #101010;
+  --indicator-bg: #10101094;
+  --transparent-bg: #10101000;
 }
 
-[dir=ltr] .selectArrowContainer{
-  right: 1.5em;
-  top: 0;
-  height: 23px;
+/* Global Styles */
+html {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+  margin: 0;
+  padding: 0;
 }
 
-/* LOGIN Section */
-/* Narrow the login form */
-#loginPage .readOnlyContent,
-#loginPage form {
-  max-width: 22em;
+/* Elements with transparency and blur effects */
+.skinHeader.semiTransparent,
+.skinHeader,
+.mainDrawer,
+.actionSheet,
+select:enabled,
+option {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur) !important;
 }
 
-/* Hide "please login" text, margin is to prevent login form moving too far up */
-#loginPage h1 {
-  display: none;
+/* Border styling for certain elements */
+.skinHeader,
+.actionSheet,
+.mainDrawer {
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: var(--border-color);
 }
 
-
-#loginPage .padded-left.padded-right.padded-bottom-page {
-  margin-top: 50px;
+/* Specific styles for .skinHeader */
+.skinHeader {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 5px;
 }
 
-/* Hide "manual" and "forgot" buttons */
-#loginPage .raised.cancel.block.btnManual.emby-button {
-  display: none;
+/* Form elements */
+select:enabled,
+option {
+  border-style: solid;
+  border-width: 1px;
 }
 
-#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
-  display: none;
+/* Hidden elements */
+.selectVideoContainer {
+  display: none !important;
 }
 
-
-
-.noBackdropTransparency .detailPageSecondaryContainer{
-  background-color: #10101000;
+/* Style for .skinHeader-withBackground.osdHeader */
+.skinHeader-withBackground.osdHeader {
+  border: 0;
 }
 
-/*#####################################################################################################################
-            LAYOUT DESKTOP
-
-######################################################################################################################*/
-
-html.preload.layout-desktop{
-  background-color: #181818;
+/* Overlay elements */
+.cardOverlayContainer,
+.cardScalables,
+.cardPadder {
+  overlay: none;
 }
 
-.layout-desktop .detailLogo {
+.cardOverlayContainer {
+  background-color: var(--transparent-bg);
+}
+
+/* List and transition effects */
+.listItem {
+  transition: 0.3s all ease-in-out;
+}
+
+.listItem:hover {
+  background-color: #00a5dc28;
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+}
+
+/* Card styles */
+.cardBox {
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 5px 5px 15px 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.itemsContainer > .card > .cardBox:hover {
+  transform: translateY(-5px);
+}
+
+/* Text styles */
+.cardText {
+  font-size: large;
+  padding: 2%;
+}
+
+.cardText-secondary {
+  font-size: small;
+}
+
+/* Margin adjustments for overflow elements */
+.overflowBackdropCard[data-index="0"],
+.overflowPortraitCard[data-index="0"],
+.overflowSquareCard[data-index="0"] {
+  margin-left: 1.5vw;
+}
+
+/* Primary content styling */
+.detailPagePrimaryContainer {
+  background-color: var(--transparent-bg);
+  display: inline-table;
   left: 5%;
-  background-position: top left;
+  padding-left: 5%;
+  z-index: 2;
 }
 
-.layout-desktop .itemBackdrop  {
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 80vw;
-  position: relative;
-  right: -20%;
-}
-
-.backdropContainer {
-  height: 100vh;
-  width: 80vw;
-  position: absolute;
-  left: 20%;
-}
-
-
-.layout-desktop .backgroundContainer {
-  position: absolute;
-  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
-  background-size: cover;
-  margin-left: 20%;
-  height: 100vh;
-  width: 80vw;
-}
-
-.layout-desktop .detailPageWrapperContainer {
-  margin-top: -65vh;
-  /* inicial: 73 */
-}
-
-.layout-desktop .detailImageContainer .card,
-.layout-desktop .itemTags{
-  display: none;
-}
-
-.layout-desktop .detailPagePrimaryContainer,
+/* Layout adjustments for desktop */
 .layout-desktop .detailPageContent {
   padding-left: 5%;
 }
@@ -101,13 +135,8 @@ html.preload.layout-desktop{
   width: 45%;
 }
 
-.layout-desktop .detailPagePrimaryContainer {
-  display: inline-table;
-  z-index: 2;
-  left: 5%;
-}
-
 .layout-desktop .detailPageSecondaryContainer {
+  background-color: var(--transparent-bg);
   margin: 0 0 1.25em 0;
 }
 
@@ -115,12 +144,51 @@ html.preload.layout-desktop{
   margin-top: 0;
 }
 
-.layout-desktop a.overview-expand.emby-button {
-  margin: none;
-  padding: none;
+/* Desktop background settings */
+html.preload.layout-desktop {
+  background-color: #181818;
 }
 
+.layout-desktop .detailLogo {
+  background-position: top left;
+  left: 5%;
+}
 
+.layout-desktop .itemBackdrop {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  right: -20%;
+  width: 80vw;
+}
+
+/* Backdrop container */
+.backdropContainer {
+  height: 100vh;
+  left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .backgroundContainer {
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+  margin-top: -65vh;
+}
+
+/* Hide unnecessary elements */
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .itemTags,
 .layout-desktop .itemName.originalTitle {
   display: none;
 }
@@ -130,486 +198,113 @@ html.preload.layout-desktop{
   font-weight: normal;
 }
 
-/* buttons section styles */
-
-.layout-desktop .mainDetailButtons {
-  margin-top: 1.5em;
+.layout-desktop a.overview-expand.emby-button {
+  margin: 0;
+  padding: 0;
 }
 
+
+/* Status indicators */
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+  backdrop-filter: var(--blur);
+  background-color: var(--indicator-bg) !important;
+  box-shadow: none;
+}
+
+
+/* Hover effects for menu options */
+.actionSheetMenuItem:hover,
+.navMenuOption:hover {
+  background-color: #00a5dc28;
+}
+
+/* Floating action button (FAB) for cards */
+.cardOverlayFab-primary {
+  -webkit-backdrop-filter: var(--blur);
+  background: linear-gradient(rgba(32, 32, 32, 0.1), rgba(32, 32, 32, 0.1)) padding-box,
+              var(--border-color) border-box;
+  background-color: rgba(0, 164, 220, 0.4);
+  backdrop-filter: var(--blur);
+  border: 2px solid transparent;
+}
+
+.cardOverlayFab-primary:hover {
+  background: linear-gradient(rgba(0, 164, 220, 0.1), rgba(0, 164, 220, 0.1)) padding-box,
+              var(--border-color) border-box;
+}
+
+/* Progress bars and inner card styles */
+.itemProgressBarForeground {
+  background-color: #00a5dc93;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.innerCardFooter > .itemProgressBar {
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  background-color: #18181849;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  right: 10px;
+}
+
+.cardOverlayButton {
+  display: none;
+}
+
+/* Headings */
+h2 {
+  font-weight: 700;
+}
+
+/* Desktop play button styles */
 .layout-desktop .btnPlay {
-  /*border: 2px solid #cecece;*/
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
   border-radius: 2em;
-  /*width: 7vw;*/
-  background-color: #0000003d;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  /*padding: 0.4em!important;*/
-  /*margin-right: 30%!important;*/
 }
 
 .layout-desktop .btnPlay:hover {
   background-color: #00a5dc28;
-  transform: scale(1.05) translateX(5px);
+  transform: translateX(5px);
 }
 
 .layout-desktop .btnPlay::after {
+  color: white;
   content: attr(title);
   margin: 0 10px 0 2px;
-  color: white;
-}
-
-.layout-desktop .material-icons.detailButton-icon.play_arrow {
-  color: white;
-
 }
 
 .layout-desktop .btnPlay.detailButton {
   flex-direction: row;
 }
 
-
-
-/*  season section  */
-.layout-desktop .vertical-list {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.layout-desktop .listItem-withContentWrapper {
-  align-items: flex-start;
-  flex-direction: column;
-  width: 32%;
-}
-
-.layout-desktop .listItem-content {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.layout-desktop .listItemImage-large {
-  height: 16vw;
-  width: 100%;
-}
-
-
-
-/*#####################################################################################################################
-            LAYOUT MOBILE
-
-######################################################################################################################*/
-
-.layout-mobile .headerHomeButton,
-.layout-mobile .headerCastButton,
-.layout-mobile .headerSyncButton {
-  display: none;
-}
-
-.layout-mobile .mainDrawerButton {
-  display: block !important;
-}
-
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
-  background: none;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
-  background: none;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.headerTabs.sectionTabs {
-  text-size-adjust: 110%;
-  font-size: 110%;
-}
-
-.pageTitle {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.emby-tab-button {
-  padding: 1.75em 1.7em;
-}
-
-/* Seccion Peliculas/Series */
-
-.layout-mobile .itemTags,
-.layout-mobile .itemName.originalTitle,
-.layout-mobile .directorsGroup,
-.layout-mobile .writersGroup,
-#seriesAirTime {
-  display: none;
-}
-
-/* Quitamos imagen de poster */
-.layout-mobile .detailImageContainer .card,
-.layout-mobile .detailImageContainer .card.backdropCard,
-.layout-mobile .detailImageContainer .card.squareCard {
-  top: auto;
-  display: none;
-}
-
-/* Mostrando Logo y posicionandolo */
-.layout-mobile .detailLogo {
-  display: block;
-  width: 15em;
-  left: 5%;
-  top: 17vh;
-}
-
-/* Mismo color de fondo a franja gris */
-.detailRibbon {
-  background: rgba(32, 32, 32, 0);
-}
-
-/* Sipnosis tamano de 5 lineas */
-.detail-clamp-text {
-  -webkit-line-clamp: 4;
-}
-
-
-.layout-mobile .infoWrapper {
-  padding-left: 0;
-  margin-top: 6em;
-}
-
-.layout-mobile .itemMiscInfo,
-.layout-mobile .itemName,
-.layout-mobile .mainDetailButtons,
-.layout-mobile .parentName {
-  text-align: left;
-}
-
-.layout-mobile .itemMiscInfo,
-.layout-mobile .itemName,
-.layout-mobile .mainDetailButtons,
-.layout-mobile .parentName {
-  justify-content: left;
-  text-align: left;
-}
-
-/* Titulo Original y removiendo el titulo actual */
-.layout-mobile .itemName.parentNameLast.withOriginalTitle {
-  margin: 0.6em 0;
-}
-
-/* moviendo a la Izq Contenedor de botones de pelicula*/
-.layout-mobile .mainDetailButtons {
-  padding-left: 0;
-}
-
-/* arregalndo padding y margin y aumentando tamano de fanart y agregando degradado */
-.layout-mobile .itemBackdrop {
-  height: 40vh;
-  /*30*/
-  margin-top: 0;
-}
-
-.layout-mobile .itemBackdrop::before {
-  content: '';
-  right: 0;
-  left: 0;
-  /*top: 0;*/
-  bottom: 0;
-  height: 25vh;
-  position: absolute;
-  z-index: -1;
-  /*background: linear-gradient(0deg, #181818 15%, #18181800 65%);*/
-  background: linear-gradient(0deg, #181818 10%, #18181800 65%);
-}
-
-.layout-mobile .detailPageWrapperContainer {
-  top: -5em;
-}
-
-.layout-mobile .infoWrapper {
-  margin-top: 0;
-}
-
-.layout-mobile .itemName.parentNameLast.withOriginalTitle {
-  margin: 0 0 0.6em 0;
-}
-
-.layout-mobile .detailPageSecondaryContainer {
-  margin: 0 0 1em 0;
-}
-
-.layout-mobile .overview-expand {
-  padding: 0 1em 0.3em 1em;
-}
-
-/* play boton */
-.layout-mobile .mainDetailButtons {
-  margin-top: 1.5em;
-}
-
-.layout-mobile .btnPlay {
-  border-radius: 2em;
-  /*width: 7vw;*/
-  background-color: #0000003d;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  /*padding: 0.4em!important;*/
-  /*margin-right: 30%!important;*/
-}
-
-
-.layout-mobile .btnPlay::after {
-  content: attr(title);
-  margin: 0 10px 0 2px;
-  color: black;
-}
-
-.layout-mobile .btnPlay.detailButton {
-  flex-direction: row;
-}
-
-.layout-mobile .btnShuffle,
-.layout-desktop .btnShuffle {
-  display: none;
-}
-
-.layout-mobile .material-icons.detailButton-icon.play_arrow {
-  color: white;
-}
-
-.layout-mobile .listViewUserDataButtons {
-  display: none;
-}
-
-.layout-mobile .listItem-content {
-  display: block;
-}
-
-.layout-mobile .listItem-content .listItemBody {
-  padding: 0.85em 0;
-}
-
-.layout-mobile .listItem-content .listItemImage-large {
-  height: 30vw;
-  width: 86vw;
-}
-
-.layout-mobile .listItem-content .listItemImage-large .listItemImageButton,
-.listItemIndicators {
-  font-size: 1em !important;
-}
-
-.layout-mobile .listItem-bottomoverview {
-  font-size: 100%;
-}
-
-.layout-mobile .detailPagePrimaryContent {
-  position: relative;
-  margin-top: 1em;
-}
-
-
-
-/********************************************************************************************************
-      general layout
-********************************************************************************************/
-/* cast & crew circular */
-
-
-#castContent .cardPadder.cardPadder-overflowPortrait.lazy-hidden-children,
-#castContent .cardPadder-mixedPortrait,
-#castContent .cardPadder-overflowPortrait,
-#castContent .cardPadder-portrait,
-#castContent .overflowPortraitCard-textCardPadder {
-  padding-bottom: 100%;
-}
-
-#castContent .cardOverlayButton-br {
-  bottom: 0;
-  position: absolute;
-  left: 38%;
-}
-
-
-.dialog {
-  background-color: #0000003d;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 5px;
-}
-
-.actionSheetContent {
-  padding: 0px 0px;
-  border: none;
-}
-
-.actionsheetDivider {
-  margin: 0;
-  border: none;
-}
-
-.listItem:not(:first-child) {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.listItem{
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.listItem:hover {
-  background: #2424245e;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.skinHeader-withBackground {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.cardOverlayContainer {
-  background: #0000003d;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.card-hoverable:hover .cardOverlayButton-hover {
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.dialogBackdropOpened {
-  opacity: 0.3;
-}
-
-.cardBox {
-  box-shadow: 4px 4px 10px 0px #000000a8;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(var(--blur));
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.cardBox:hover {
-  box-shadow: 5px 5px 12px 0px #000000a8;
-}
-
-.itemsContainer>.card>.cardBox {
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.itemsContainer>.card>.cardBox:hover {
-  transform: scale(1.015) translateX(5px);
-}
-
-.collapseContent,
-.formDialogHeader:not(.formDialogHeader-clear),
-.paperList,
-.visualCardBox {
-  background-color: #202020a8;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-}
-
-.cardTextCentered,
-.cardTextCentered>.textActionButton {
-  padding-bottom: 5%;
-}
-
-.cardText-first {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.indicator {
-  background: linear-gradient(135deg, rgba(170, 92, 195, 0.5) 0%, rgba(3, 163, 220, 0.5) 100%);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-}
-
-.semiTransparent,
-.osdHeader {
-  box-shadow: none;
-  border: none;
-}
-
-.cardOverlayButton:hover {
-  background-color: rgba(0, 164, 220, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-}
-
-.cardOverlayFab-primary{
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-
-}
-
-
-.emby-select-withcolor{
-  background-color: #202020a8;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-}
-
-.detailTrackSelect{
-  width: 20%;
-  transition: all 0.5s ease-in-out;
-}
-
-.detailTrackSelect:hover{
-  width: 100%;
-}
-
-.detailTrackSelect:focus{
-  width: 100%;
-}
-
-
-.selectArrowContainer{
-  margin-top: 1px;
-  height: 18px;
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  background-color: #202020a8;
-  position: relative;
-  top: 0;
-  right: 1.5em;
-}
-
-
-.formDialogFooter{
-  background-color: #202020;
-  box-shadow: #00000047 0 -20px 20px;
-}
-
-.vertical-list{
-  display: block;
-}
-
-@media (min-width: 768px){
-  .headerTabs.sectionTabs{
-    margin-top: -4.3em;
+/* Media Query for hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .paper-icon-button-light:hover:not(:disabled) {
+    background-color: #00a5dc11;
+    color: #00a5dcec;
   }
-  
 }
 
-@media (max-width: 767px){
-  .libraryPage:not(.noSecondaryNavPage){
-    padding-top: 9em !important;
-  }
+/* Other styles */
+.raised {
+  border-radius: 4em;
+}
 
+#btnShutdown {
+  background-color: #bb4a4a;
+}
+
+.paperList {
+  border-radius: 1em;
 }
