@@ -1,26 +1,40 @@
-# jellyfin-theme
+# Jellyfin Theme - Glassmorphism
 
-just theme for jellyfin
+A sleek and modern **theme for Jellyfin** inspired by the **glassmorphism design trend**. Customize your Jellyfin experience with this visually appealing and user-friendly theme.
 
-I have made a fork of this theme: https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_css_for_moviestv_show_sections/
+This theme is a fork of the original design shared on Reddit: [My custom CSS for Movies/TV show sections](https://www.reddit.com/r/jellyfin/comments/12wpxry/my_custom_css_for_moviestv_show_sections/).
 
-## glassmorphism
+---
 
-![gif 1 (1)](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.gif?raw=true)
+## 🎨 Features
 
+- **Glassmorphism Design**: Adds a frosted glass aesthetic to your Jellyfin interface.
+- **Responsive and Lightweight**: Designed to work seamlessly across devices.
+- **Easy Installation**: Integrates directly into your Jellyfin custom CSS.
 
-![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/fdf4ad37-5cd5-4f94-985f-196143d8daf8)
+---
 
+## 🖼️ Preview
 
-![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/024a3f5f-f19d-4ad2-825c-23353e630223)
+### Elegant Glassmorphism in Action:
 
+![Glassmorphism Theme GIF](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.gif?raw=true)
 
-![image](https://github.com/alexyle/jellyfin-theme/assets/53535044/a7b851a6-303f-4489-a7bc-6362a92e0d0a)
+![Glassmorphism Screenshot 1](https://github.com/alexyle/jellyfin-theme/assets/53535044/fdf4ad37-5cd5-4f94-985f-196143d8daf8)
 
+![Glassmorphism Screenshot 2](https://github.com/alexyle/jellyfin-theme/assets/53535044/024a3f5f-f19d-4ad2-825c-23353e630223)
 
-### Installation
+![Glassmorphism Screenshot 3](https://github.com/alexyle/jellyfin-theme/assets/53535044/a7b851a6-303f-4489-a7bc-6362a92e0d0a)
 
-add on custom css
-```
-@import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
-```
+---
+
+## 📥 Installation Guide
+
+Follow these simple steps to apply the Glassmorphism theme to your Jellyfin instance:
+
+1. Open your Jellyfin dashboard.
+2. Navigate to `Dashboard > Settings > Custom CSS`.
+3. Paste the following CSS import link:
+
+   ```css
+   @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
