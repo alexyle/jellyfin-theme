@@ -61,6 +61,15 @@ option {
 /* Style for .skinHeader-withBackground.osdHeader */
 .skinHeader-withBackground.osdHeader {
   border: 0;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background: linear-gradient(180deg, hsla(0, 0%, 6%, .75), hsla(0, 0%, 6%, 0));
+  color: #eee;
+  height: 7.5em;
+  pointer-events: none;
+  position: relative;
+  transition: opacity .3sease-out;
+  z-index: 1;
 }
 
 /* Overlay elements */
@@ -256,9 +265,7 @@ html.preload.layout-desktop {
   right: 10px;
 }
 
-.cardOverlayButton {
-  display: none;
-}
+
 
 /* Headings */
 h2 {
@@ -307,4 +314,9 @@ h2 {
 
 .paperList {
   border-radius: 1em;
+}
+
+
+.sliderContainer {
+  height: 1em;
 }
