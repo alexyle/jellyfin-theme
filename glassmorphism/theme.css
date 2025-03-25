@@ -27,6 +27,8 @@ select:enabled,
 option {
   background-color: var(--bg-color);
   backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: var(--blur) !important;
+
 }
 
 /* Border styling for certain elements */
@@ -218,7 +220,8 @@ html.preload.layout-desktop {
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .playedIndicator {
-  backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: var(--blur) !important;
   background-color: var(--indicator-bg) !important;
   box-shadow: none;
 }
