@@ -27,7 +27,7 @@ select:enabled,
 option {
   background-color: var(--bg-color);
   backdrop-filter: var(--blur) !important;
-  -webkit-backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
 
 }
 
@@ -92,7 +92,7 @@ option {
 
 .listItem:hover {
   background-color: #00a5dc28;
-  -webkit-backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   backdrop-filter: var(--blur);
 }
 
@@ -221,7 +221,7 @@ html.preload.layout-desktop {
 .mediaSourceIndicator,
 .playedIndicator {
   backdrop-filter: var(--blur) !important;
-  -webkit-backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
   background-color: var(--indicator-bg) !important;
   box-shadow: none;
 }
@@ -235,7 +235,7 @@ html.preload.layout-desktop {
 
 /* Floating action button (FAB) for cards */
 .cardOverlayFab-primary {
-  -webkit-backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   background: linear-gradient(rgba(32, 32, 32, 0.1), rgba(32, 32, 32, 0.1)) padding-box,
               var(--border-color) border-box;
   background-color: rgba(0, 164, 220, 0.4);
@@ -256,7 +256,7 @@ html.preload.layout-desktop {
 }
 
 .innerCardFooter > .itemProgressBar {
-  -webkit-backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   backdrop-filter: var(--blur);
   background-color: #18181849;
   border-radius: 10px;
