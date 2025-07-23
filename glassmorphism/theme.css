@@ -184,11 +184,8 @@ html.preload.layout-desktop {
   width: 80vw;
 }
 
-.backgroundContainer.withBackdrop{
-  background-color: transparent;
-}
-
-#reactRoot:has(.skinHeader.semiTransparent) > .backgroundContainer.withBackdrop {
+#reactRoot:has(.skinHeader.semiTransparent) > .backgroundContainer.withBackdrop,
+#reactRoot > .skinHeader.semiTransparent + .backgroundContainer.withBackdrop {
   background-color: transparent;
   background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
   background-size: cover;
@@ -197,6 +194,18 @@ html.preload.layout-desktop {
   position: absolute;
   width: 80vw;
 }
+
+
+
+.layout-desktop .backgroundContainer {
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
 
 .layout-desktop .detailPageWrapperContainer {
   margin-top: -65vh;
@@ -229,9 +238,13 @@ html.preload.layout-desktop {
 }
 
 #reactRoot:not(:has(.skinHeader.semiTransparent)) > .backgroundContainer.withBackdrop {
+  position: fixed !important;
   backdrop-filter: blur(30px) saturate(80%) brightness(60%);
   background: none;
   background-color: #18181849;
+  margin-left: 0;
+  background-size: cover;
+  position: relative;
   width: 100vw;
   left: 0;
   top: 0;
