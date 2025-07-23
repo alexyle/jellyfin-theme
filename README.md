@@ -18,7 +18,7 @@ This theme is a fork of the original design shared on Reddit: [My custom CSS for
 
 ### Elegant Glassmorphism in Action:
 
-![Glassmorphism Screenshot 1](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
+![Glassmorphism Screenshot 1](https://github.com/alexyle/jellyfin-theme/blob/main/assets/293199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
 
 ![Glassmorphism Screenshot 2](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298104937-fdf4ad37-5cd5-4f94-985f-196143d8daf8.png?raw=true)
 
@@ -27,6 +27,22 @@ This theme is a fork of the original design shared on Reddit: [My custom CSS for
 ![Glassmorphism Screenshot 4](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-4489-a7bc-6362a92e0d0a.png?raw=true)
 
 ---
+
+## Feature
+
+### Custom Music Player
+
+![Glassmorphism Screenshot 5](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298192076-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
+
+![Glassmorphism Screenshot 6](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199076-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
+
+
+### Backdrop support
+
+![Glassmorphism Screenshot 7](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
+
+---
+
 
 ## 📥 Installation Guide
 
