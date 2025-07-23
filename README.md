@@ -37,4 +37,4 @@ Follow these simple steps to apply the Glassmorphism theme to your Jellyfin inst
 3. Paste the following CSS import link:
 
    ```css
-   @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
+   @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@V2/glassmorphism/theme.css';
