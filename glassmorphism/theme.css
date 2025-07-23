@@ -184,7 +184,12 @@ html.preload.layout-desktop {
   width: 80vw;
 }
 
-.layout-desktop .backgroundContainer {
+.backgroundContainer.withBackdrop{
+  background-color: transparent;
+}
+
+#reactRoot:has(.skinHeader.semiTransparent) > .backgroundContainer.withBackdrop {
+  background-color: transparent;
   background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
   background-size: cover;
   height: 100vh;
@@ -196,6 +201,65 @@ html.preload.layout-desktop {
 .layout-desktop .detailPageWrapperContainer {
   margin-top: -65vh;
 }
+
+.skinHeader:has(.noHomeButtonHeader)
+  .backdropContainer {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: #18181849;
+    width: 100vw;
+    left: 0;
+  }
+
+
+
+  .skinHeader:has(.noHomeButtonHeader)
+    .layout-desktop .backgroundContainer {
+    display: none;
+  }
+
+.skinHeader.noHomeButtonHeader .backdropContainer {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: #18181849;
+  width: 100vw;
+  left: 0;
+}
+
+.skinHeader.noHomeButtonHeader .layout-desktop .backgroundContainer {
+  display: none;
+}
+
+#reactRoot:not(:has(.skinHeader.semiTransparent)) > .backgroundContainer.withBackdrop {
+  backdrop-filter: blur(30px) saturate(80%) brightness(60%);
+  background: none;
+  background-color: #18181849;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+
+#reactRoot:not(:has(.skinHeader.semiTransparent)) >  .backdropContainer {
+  height: 100vh;
+  left: 0;
+  position: fixed !important;
+  width: 100vw;
+  animation: BackgroundMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes BackgroundMove {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  50% {
+    transform: scale(1.02) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
 
 /* Hide unnecessary elements */
 .layout-desktop .detailImageContainer .card,
@@ -333,3 +397,141 @@ h2 {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+
+/* Now Playing Bar Styles */
+
+.nowPlayingBar {
+  position: fixed;
+  bottom: 1vh;
+  left: 3vw;
+  right: 3vw;
+  height: 7vh;
+  border-radius: 1em;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: var(--blur);
+  background-color: #18181849; 
+  z-index: 1;
+}
+
+.nowPlayingBar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  background: var(--border-color);
+  padding: 1px; 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+
+.nowPlayingBarPositionContainer{
+  top: 3em;
+  left: 30em;
+  right: 30em;
+}
+
+.nowPlayingBarCenter {
+  top: -.04em;
+}
+
+.mdl-slider-background-flex{
+  height: .3em !important;
+}
+
+
+.nowPlayingBar .nowPlayingImage {
+  border-radius: 2em;
+  margin: 1em;
+  height: 3.5em;
+  width: 3.5em;
+  background-size: auto;
+  background-position: initial;
+  animation: rotating 4s linear infinite;
+  -webkit-mask: 
+    radial-gradient(
+      circle at center,       
+      transparent 20%,        
+      black 21%             
+    ) no-repeat center/100% 100%;
+  mask: 
+    radial-gradient(
+      circle at center,
+      transparent 20%,
+      black 21%
+    ) no-repeat center/100% 100%;
+
+  background-clip: padding-box;
+}
+
+
+
+.sliderBubble {
+  background-color: #00000000; 
+  z-index: 1;
+}
+
+.sliderBubbleText{
+  font-size: medium;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nowPlayingPageImage{
+  border-radius: 10em;
+  margin: 1em;
+  height: 15em;
+  width: 15em;
+  background-size: auto;
+  background-position: initial;
+  animation: rotating 4s linear infinite paused;
+
+  -webkit-mask: 
+    radial-gradient(
+      circle at center,       
+      transparent 20%,        
+      black 21%             
+    ) no-repeat center/100% 100%;
+  mask: 
+    radial-gradient(
+      circle at center,
+      transparent 20%,
+      black 21%
+    ) no-repeat center/100% 100%;
+
+  background-clip: padding-box;
+}
+
+.nowPlayingInfoContainer:has(.nowPlayingInfoControls .material-icons.pause_circle_filled)
+  .nowPlayingPageImage {
+  animation-play-state: running;
+}
+
+.nowPlayingInfoContainer:has(.nowPlayingInfoControls .material-icons.play_circle_filled)
+  .nowPlayingPageImage {
+  animation-play-state: paused;
+}
+
+.nowPlayingBarTop:has(.nowPlayingBarCenter .material-icons.pause_circle_filled)
+  .nowPlayingImage {
+  animation-play-state: running;
+}
+
+.nowPlayingBarTop:has(.nowPlayingBarCenter .material-icons.play_arrow)
+  .nowPlayingImage {
+  animation-play-state: paused;
+}
+
+
+
