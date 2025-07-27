@@ -75,7 +75,7 @@ html.preload.layout-desktop{
 
 .layout-desktop .backgroundContainer {
   position: absolute;
-  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/V1/glassmorphism/mask.png");
   background-size: cover;
   margin-left: 20%;
   height: 100vh;
