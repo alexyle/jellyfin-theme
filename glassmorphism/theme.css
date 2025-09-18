@@ -71,7 +71,7 @@ option {
   height: 7.5em;
   pointer-events: none;
   position: relative;
-  transition: opacity .3sease-out;
+  transition: opacity .3s ease-out;
   z-index: 1;
 }
 
@@ -103,15 +103,20 @@ option {
               var(--border-color) border-box;
   border: 1px solid transparent;
   border-radius: 15px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
   padding: 25px;
-  transition: transform 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .itemsContainer > .card > .cardBox:hover {
   transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.itemsContainer > .card > .cardBox:active {
+  transform: translateY(-9px);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.3);
+}
 
 .homeLibraryButton{
   backdrop-filter: var(--blur) !important;
@@ -121,16 +126,18 @@ option {
               var(--border-color) border-box;
   border: 1px solid transparent;
   border-radius: 15px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .homeLibraryButton:hover {
   transform: translateY(-5px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .homeLibraryButton:active {
   transform: translateY(-15px);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 .fab:focus, .raised:focus {
@@ -138,6 +145,13 @@ option {
               var(--border-color) border-box;
 }
 
+.cardBox:not(.visualCardBox) .cardPadder, .cardContent-shadow {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.cardBox:not(.visualCardBox) .cardPadder, .cardContent-shadow {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
 
 /* Text styles */
 .cardText {
@@ -553,7 +567,8 @@ h2 {
 
 
 .sliderBubble {
-  background-color: #00000000; 
+  background-color: #000000; 
+
   z-index: 1;
 }
 
@@ -616,4 +631,14 @@ h2 {
 }
 
 
+:has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:has(.cardImageIcon.person) {
+  display: block !important;
+  margin-left: 60vw;
+  border-radius: 30px;
+}
+
+:has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:has(.cardImageIcon.tv) {
+  display: none !important;
+
+}
 
