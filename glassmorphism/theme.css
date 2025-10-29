@@ -185,6 +185,7 @@ option {
 }
 
 .layout-desktop .detailPagePrimaryContent {
+  padding-left: 0;
   width: 45%;
 }
 
@@ -642,3 +643,8 @@ h2 {
 
 }
 
+.layout-desktop [dir=ltr] .detailRibbon, .layout-tv [dir=ltr] .detailRibbon {
+  display: contents;
+  padding-left: 0;
+  background: #00000000;
+}
