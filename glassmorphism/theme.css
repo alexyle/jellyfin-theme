@@ -648,3 +648,7 @@ h2 {
   padding-left: 0;
   background: #00000000;
 }
+
+.noBackdropTransparency .detailPagePrimaryContainer{
+  background-color: #00000000;
+}
