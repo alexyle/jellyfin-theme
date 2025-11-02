@@ -180,7 +180,9 @@ option {
 }
 
 /* Layout adjustments for desktop */
-.layout-desktop .detailPageContent {
+.layout-desktop .detailPageContent,
+.layout-desktop .infoWrapper, 
+.layout-desktop .mainDetailButtons{
   padding-left: 5%;
 }
 
