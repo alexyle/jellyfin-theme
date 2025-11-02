@@ -678,5 +678,9 @@ h2 {
 }
 
 .vertical-list{
-  width: 90vw;
+  width: 100vw;
+}
+
+#listChildrenCollapsible{
+  width: 100vw;
 }
