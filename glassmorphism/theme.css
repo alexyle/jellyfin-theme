@@ -164,10 +164,27 @@ option {
 }
 
 /* Margin adjustments for overflow elements */
-.overflowBackdropCard[data-index="0"],
-.overflowPortraitCard[data-index="0"],
-.overflowSquareCard[data-index="0"] {
-  margin-left: 1.5vw;
+
+.itemsContainer.vertical-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;                
+  padding-inline: 1.5vw;     
+}
+
+
+.itemsContainer {
+  display: flex;
+  gap: 1vw;
+  padding-inline: 1.5vw;
+}
+
+
+.itemsContainer:not(.scrollSlider) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  padding-inline: 1.5vw;
 }
 
 /* Primary content styling */
@@ -653,4 +670,13 @@ h2 {
 
 .noBackdropTransparency .detailPagePrimaryContainer{
   background-color: #00000000;
+}
+
+
+.collectionItems{
+  width: 100vw;
+}
+
+.vertical-list{
+  width: 90vw;
 }
