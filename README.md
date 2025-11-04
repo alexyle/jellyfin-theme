@@ -36,10 +36,15 @@ This theme is a fork of the original design shared on Reddit: [My custom CSS for
 
 ![Glassmorphism Screenshot 6](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199076-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
 
+### Liquid glass
+
+![Glassmorphism Screenshot 7](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199076-a7b851a6-323f-8412-a7bc-6362a92e0d0a.png?raw=true)
+
+![Glassmorphism Screenshot 8](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199076-a7b851a6-423f-8412-a7bc-6362a92e0d0a.png?raw=true)
 
 ### Backdrop support
 
-![Glassmorphism Screenshot 7](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
+![Glassmorphism Screenshot 9](https://github.com/alexyle/jellyfin-theme/blob/main/assets/298199066-a7b851a6-303f-8412-a7bc-6362a92e0d0a.png?raw=true)
 
 ---
 
@@ -54,3 +59,11 @@ Follow these simple steps to apply the Glassmorphism theme to your Jellyfin inst
 
    ```css
    @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
+    ```
+
+   with liquid glass
+
+   ```css
+   @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@liquid-glass/glassmorphism/theme.css';
+   ```
+   
