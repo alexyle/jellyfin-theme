@@ -654,6 +654,7 @@ h2 {
 :has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:has(.cardImageIcon.person) {
   display: block !important;
   margin-left: 60vw;
+  position: absolute;
   border-radius: 30px;
 }
 
