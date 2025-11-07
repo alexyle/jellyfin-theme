@@ -8,6 +8,7 @@
   --card-bg: #101010;
   --indicator-bg: #10101094;
   --transparent-bg: #10101000;
+  --card-gap: 1vw;
 }
 
 /* Global Styles */
@@ -168,14 +169,14 @@ option {
 .itemsContainer.vertical-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw;                
+  gap: var(--card-gap);                
   padding-inline: 1.5vw;     
 }
 
 
 .itemsContainer {
   display: flex;
-  gap: 1vw;
+  gap: var(--card-gap);
   padding-inline: 1.5vw;
 }
 
@@ -183,7 +184,7 @@ option {
 .itemsContainer:not(.scrollSlider) {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw;
+  gap: var(--card-gap);
   padding-inline: 1.5vw;
 }
 
