@@ -61,7 +61,7 @@ Follow these simple steps to apply the Glassmorphism theme to your Jellyfin inst
    @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/theme.css';
     ```
 
-   with liquid glass
+   with liquid glass (only works on Chromium-based browsers)
 
    ```css
    @import 'https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@liquid-glass/glassmorphism/theme.css';
