@@ -655,7 +655,7 @@ h2 {
 :has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:has(.cardImageIcon.person) {
   display: block !important;
   left: 60vw;
-  top: -13vw;
+  top: -10h;
   position: absolute;
   border-radius: 30px;
 }
@@ -686,4 +686,47 @@ h2 {
 
 #listChildrenCollapsible{
   width: 90vw;
+}
+
+.layout-mobile [dir=ltr] .infoWrapper {
+  padding-left: 0;
+}
+
+
+.layout-mobile .detailRibbon{
+    width: 100vw;
+    position: relative;
+    right: 5vw;
+}
+
+.layout-mobile .trackSelections {
+  position: relative;
+  right: 6vw;
+}
+
+.layout-mobile .overflowPortraitCard:not(.scrollSlider) {
+  flex: 0 0 calc((100% - 50px) / 3) !important;
+  width: calc((100% - 50px) / 3) !important;
+    
+  max-width: none !important; 
+  margin: 0 !important; 
+}
+
+.layout-mobile .itemsContainer:not(.scrollSlider){
+  display: flex !important;   
+  flex-wrap: wrap !important;
+  overflow-y: visible !important; 
+  gap: 10px; 
+  justify-content: flex-start; 
+}
+
+.layout-mobile .detailImageContainer .card {
+  display: none;
+}
+
+.layout-mobile :has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:has(.cardImageIcon.person) {
+  left: 35vw;
+  top: -24vh;
+  bottom: 3vh;
+  border-radius: 0;
 }
