@@ -2,22 +2,26 @@
 
 /* Global Variables */
 :root {
-  --bg-color: #18181849;
+  --w-color: #18181849;
   --blur: blur(16px) saturate(180%);
   --border-color: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%);
   --card-bg: #101010;
   --indicator-bg: #10101094;
   --transparent-bg: #10101000;
+  --bg-color: rgb(24, 24, 24);
   --card-gap: 1vw;
 }
 
 /* Global Styles */
 html {
+  background-color: var(--bg-color) !important;
   box-sizing: border-box;
   font-family: "Inter", sans-serif !important;
   margin: 0;
   padding: 0;
 }
+
+
 
 /* Elements with transparency and blur effects */
 .skinHeader.semiTransparent,
@@ -26,7 +30,7 @@ html {
 .actionSheet,
 select:enabled,
 option {
-  background-color: var(--bg-color);
+  background-color: var(--w-color);
   backdrop-filter: var(--blur) !important;
   -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
 
@@ -251,8 +255,8 @@ html.preload.layout-desktop {
 #reactRoot > .skinHeader.semiTransparent + .backgroundContainer.withBackdrop {
   background-color: transparent;
   background:
-    linear-gradient(90deg, rgb(24, 24, 24), rgba(24, 24, 24, 0) 60%),
-    linear-gradient(360deg, rgb(24, 24, 24), rgba(24, 24, 24, 0) 60%);
+    linear-gradient(90deg, var(--bg-color), rgba(24, 24, 24, 0) 60%),
+    linear-gradient(360deg, var(--bg-color), rgba(24, 24, 24, 0) 60%);
   background-size: cover;
   height: 100vh;
   margin-left: 20%;
@@ -264,8 +268,8 @@ html.preload.layout-desktop {
 
 .layout-desktop .backgroundContainer {
   background:
-    linear-gradient(90deg, rgb(24, 24, 24), rgba(24, 24, 24, 0) 60%),
-    linear-gradient(360deg, rgb(24, 24, 24), rgba(24, 24, 24, 0) 60%);
+    linear-gradient(90deg, var(--bg-color), rgba(24, 24, 24, 0) 60%),
+    linear-gradient(360deg, var(--bg-color), rgba(24, 24, 24, 0) 60%);
   background-size: cover;
   height: 100vh;
   margin-left: 20%;
