@@ -460,19 +460,17 @@ h2 {
 
 /* Desktop play button styles */
 .layout-desktop .btnPlay {
-  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-              var(--border-color) border-box;
-  border: 1px solid transparent;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 2em;
 }
 
 .layout-desktop .btnPlay:hover {
-  background-color: #00a5dc28;
+  background-color: #fff;
   transform: translateX(5px);
 }
 
 .layout-desktop .btnPlay::after {
-  color: white;
   content: attr(title);
   margin: 0 10px 0 2px;
 }
@@ -734,3 +732,6 @@ h2 {
   bottom: 3vh;
   border-radius: 0;
 }
+
+
+
