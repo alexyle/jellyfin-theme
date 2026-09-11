@@ -1,0 +1,95 @@
+.MuiPaper-rounded{
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: none !important;
+    background-image: none !important;
+    border-radius: var(--jf-card-borderRadius);
+
+}
+
+
+
+.MuiPaper-rounded::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* épaisseur bordure */
+  border-radius: inherit;
+  background: linear-gradient(var(--jf-border-gradient));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+
+}
+
+.MuiMenuItem-gutters:hover{
+    background-color: var(--jf-palette-secondary-main-transparent);
+}
+
+
+.css-1v2vhpl{
+    scrollbar-width: none;
+}
+
+.css-ecgo44{
+    background-color: var(--jf-palette-background-transparent);
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+.dialog{
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: none !important;
+    background-image: none !important;
+    border-radius: var(--jf-card-borderRadius) !important;
+}
+
+
+.dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* épaisseur bordure */
+  border-radius: inherit;
+  background: linear-gradient(var(--jf-border-gradient));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.actionSheetMenuItem:hover{
+    background-color: var(--jf-palette-secondary-main-transparent);
+}
+
+.css-epnusv{
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+
+.css-epnusv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding-right: 1px; /* épaisseur bordure */
+  border-radius: inherit;
+  background: linear-gradient(var(--jf-border-gradient));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

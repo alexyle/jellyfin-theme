@@ -1,0 +1,38 @@
+.nowPlayingBar{
+    bottom: 1dvh;
+    left: 2dvw;
+    right: 2dvw;
+    height: 9dvh;
+    border-radius: var(--jf-card-borderRadius);
+    background-color: var(--jf-palette-background-transparent) !important;
+    backdrop-filter: var(--jf-blur-base);
+}
+
+
+.nowPlayingBar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* épaisseur bordure */
+  border-radius: inherit;
+  background: linear-gradient(var(--jf-border-gradient));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+
+}
+
+.nowPlayingBarPositionContainer{
+   top: 3.56em;
+}
+
+.mdl-slider-background-flex-container{
+     padding: 0 1em;
+}
+
+.appfooter{
+ background: transparent;
+}

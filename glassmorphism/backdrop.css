@@ -1,0 +1,115 @@
+.detailImageContainer{
+    display: none;
+}
+
+.withBackdrop{
+    background-color: transparent;
+}
+
+.detailRibbon{
+    padding-left: 3%;
+}
+
+.detailLogo {
+    left: 9dvw;
+}
+
+
+.detailRibbon{
+    padding-left: 7dvw !important;
+    background-color: transparent;
+    display: block;
+    
+}
+
+.layout-desktop .detailPagePrimaryContent{
+    margin-top: 6dvh;
+    padding-left: 5dvw !important;
+    padding-right: 50dvw !important;
+}
+
+
+.detailPageWrapperContainer{
+    background-color: transparent !important;
+}
+
+.layout-desktop .backdropContainer{
+    position: absolute;
+    left: 30dvw;
+}
+
+
+.layout-desktop .backgroundContainer {
+  background: linear-gradient(90deg, var(--jf-palette-background-default), rgba(24, 24, 24, 0) 60%),
+              linear-gradient(360deg, var(--jf-palette-background-default), rgba(24, 24, 24, 0) 60%);
+  background-size: cover;
+  left: 30dvw;
+  position: absolute;
+  opacity: 1;
+}
+
+html{
+    background-color: var(--jf-palette-background-default) !important;
+}
+
+
+#reactRoot:has(#indexPage:not(.hide)) > .backgroundContainer,
+#reactRoot:has([aria-controls="library-view-menu"]) > .backgroundContainer {
+    background: none;
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base) saturate(50%) brightness(30%);
+    -webkit-backdrop-filter: var(--jf-blur-base) saturate(50%) brightness(30%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 0;
+}
+
+#reactRoot:has(#indexPage:not(.hide)) > .backdropContainer,
+#reactRoot:has([aria-controls="library-view-menu"]) > .backdropContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 134dvh;
+    animation: parallax-move linear;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+}
+
+#reactRoot:has(#indexPage:not(.hide)) > .backdropContainer > .backdropImage,
+#reactRoot:has([aria-controls="library-view-menu"]) > .backdropContainer > .backdropImage {
+  animation: kenBurns 30s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0) rotateZ(0deg); }
+  100% { transform: scale(1.5) translate(-10%, 10%) rotateZ(5deg); }
+}
+
+@keyframes parallax-move {
+  from { transform: translateY(0); }
+  to { transform: translateY(-300px); }
+}
+
+.detailTrackSelect{
+    border-radius: var(--jf-card-borderRadius);
+    backdrop-filter: var(--jf-blur-base) saturate(50%) brightness(30%);
+    background-color: var(--jf-palette-background-transparent);
+    border: none;
+    padding: .1em 1em !important;
+}
+
+
+
+.detailTrackSelect option {
+    background-color: var(--jf-palette-background-paper) !important;
+    border: none;
+}
+
+.detailTrackSelect option:checked{
+    background-color: #00a5dc !important;
+    color: #ffffff;
+}
+

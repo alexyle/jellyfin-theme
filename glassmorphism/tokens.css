@@ -1,0 +1,21 @@
+:root{
+    --jf-prim-background-default: 24, 24, 27;
+    --jf-prim-background-paper: 35, 35, 40;
+    --jf-prim-primary-main: 0, 164, 220;
+
+    --jf-palette-background-default: rgb(var(--jf-prim-background-default));
+    --jf-palette-background-paper: rgb(var(--jf-prim-background-paper));
+    --jf-palette-background-transparent: rgba(var(--jf-prim-background-paper), 0.6);
+    --jf-palette-primary-main: rgb(var(--jf-prim-primary-main));
+    --jf-palette-primary-main-transparent: rgba(var(--jf-prim-primary-main), 0.6);
+    --jf-palette-secondary-main-transparent: rgba(var(--jf-prim-primary-main), 0.2);
+    --jf-radius-base: 1.2em;
+    --jf-blur-base: blur(16px) saturate(180%);
+    --jf-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+    --jf-columnGaps-itemContainer: 0dvw;
+    --jf-shadow-card: 5px 5px 10px 0px #00000036;
+    --jf-border-gradient: 45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%;
+
+    --jf-card-borderRadius: var(--jf-radius-base);
+
+}

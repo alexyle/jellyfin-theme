@@ -1,0 +1,158 @@
+.cardBox{
+    border-radius: var(--jf-card-borderRadius);
+    padding-bottom: .5em !important;
+    box-shadow: var(--jf-shadow-card);
+    border: 1px solid transparent;
+    background:
+    linear-gradient( var(--jf-palette-background-paper), var(--jf-palette-background-paper)) padding-box,
+    linear-gradient( var(--jf-border-gradient)) border-box;
+    transition: transform .2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+.cardBox:hover{
+    transform: translateY(-5px);
+}
+
+.cardImageContainer, .cardPadder, .cardOverlayContainer, .cardContent{
+    border-radius: 0;
+    border-top-right-radius: var(--jf-card-borderRadius);
+    border-top-left-radius: var(--jf-card-borderRadius);
+}
+
+.cardPadder{
+    box-shadow: 0 0 0 0;
+}
+
+.cardText{
+    padding: .3em 1em;
+}
+
+.cardOverlayContainer{
+    background-color: transparent !important;
+}
+
+.cardOverlayContainer>.cardOverlayFab-primary {
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    mask-image: radial-gradient(
+    ellipse 100% 100% at center,
+    black 30%,
+    transparent 100%
+    );
+}
+
+
+
+.cardOverlayButton-br .cardOverlayButton {
+  transform: translateY(-14px);
+}
+
+.card:hover .cardOverlayButton-br .cardOverlayButton,
+.card:focus-within .cardOverlayButton-br .cardOverlayButton {
+  animation: overlayDrop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.card:hover .cardOverlayButton-br .cardOverlayButton:nth-child(1),
+.card:focus-within .cardOverlayButton-br .cardOverlayButton:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.card:hover .cardOverlayButton-br .cardOverlayButton:nth-child(2),
+.card:focus-within .cardOverlayButton-br .cardOverlayButton:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.card:hover .cardOverlayButton-br .cardOverlayButton:nth-child(3),
+.card:focus-within .cardOverlayButton-br .cardOverlayButton:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+@keyframes overlayDrop {
+  from {
+    transform: translateY(-14px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+.itemsContainer{
+    column-gap: var(--jf-columnGaps-itemContainer);
+    margin-left: 0;
+    padding-inline: 1.4dvw;
+}
+
+.indicator{
+    background-color: var(--jf-palette-background-transparent);
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    color: #fff;
+}
+
+.innerCardFooterClear{
+    bottom: 1em;
+    right: 1em;
+    left: 1em;
+}
+
+.itemProgressBar, .itemProgressBarForeground {
+    height: 1em;
+    border-radius: 999px;
+    backdrop-filter: var(--jf-blur-base);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.itemProgressBar{
+    background-color: var(--jf-palette-background-transparent);
+
+}
+
+.itemProgressBarForeground{
+    background-color: var(--jf-palette-primary-main-transparent);
+}
+
+.detailImageContainer .card .cardBox{
+    padding: 0 !important;
+}
+
+.detailImageContainer .card .cardBox:hover{
+    transform: translateY(0);
+}
+
+.cardPadder-portrait > div.cardImageContainer{
+    border-radius: var(--jf-card-borderRadius);
+}
+
+.card{
+    overflow: clip;
+    overflow-clip-margin: 20px;
+}
+
+
+
+
+
+
+.homeLibraryButton{
+    border-radius: var(--jf-card-borderRadius);
+    box-shadow: var(--jf-shadow-card);
+    border: 1px solid transparent;
+    background:
+    linear-gradient( var(--jf-palette-background-paper), var(--jf-palette-background-paper)) padding-box,
+    linear-gradient( var(--jf-border-gradient)) border-box;
+    transition: transform .2s cubic-bezier(0.4, 0, 1, 1), background .2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+
+.homeLibraryButton:hover{
+    background:
+    linear-gradient( var(--jf-palette-background-paper), var(--jf-palette-background-paper)) padding-box,
+    linear-gradient( var(--jf-border-gradient)) border-box;
+    transform: translateY(-5px);
+}
+
