@@ -1,9 +1,9 @@
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/reset.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/tokens.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/cards.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/header.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/dialog.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/backdrop.css");
-@import url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/refs/heads/main/glassmorphism/music.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/reset.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/tokens.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/cards.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/header.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/dialog.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/backdrop.css");
+@import url("https://cdn.jsdelivr.net/gh/alexyle/jellyfin-theme@main/glassmorphism/music.css");
 
 
